@@ -2,7 +2,7 @@
 
 .tree-view {
   font-size: @font-size;
-  background: @tree-view-background-color;
+  background: #253237 !important;
 
   .selected:before {
     background: #444;
@@ -33,5 +33,78 @@
   .tree-view .selected:before,
   .focusable-panel {
     box-shadow: inset 3px 0 0 rgba(0,0,0, .05);
+  }
+}
+
+.icon-file-directory {
+    color: #b2bdc0;
+    font-weight: bold;
+
+    &:before {
+        color: #536f7a;
+    }
+}
+
+
+// -----------------------------------------------------------------------------
+//! Folders
+// -----------------------------------------------------------------------------
+
+.list-tree.has-collapsable-children .list-nested-item > .list-item {
+	color: white;
+	font-weight: normal;
+}
+
+li.list-nested-item.selected > .list-item {
+	color: #a8f9fb;
+}
+
+.expanded .icon-file-directory {
+	font-weight: normal;
+}
+
+
+
+.list-group .selected::before, .list-tree .selected::before {
+	background: transparent;
+}
+.focusable-panel:focus .selected:before {
+	background: transparent;
+}
+.focusable-panel:focus .selected {
+	color: #a8f9fb;
+}
+
+// -----------------------------------------------------------------------------
+//! File Name
+// -----------------------------------------------------------------------------
+
+.icon-file-text {
+	color: #6a7e82;
+}
+
+.list-group li:not(.list-nested-item), .list-tree li:not(.list-nested-item), .list-group li.list-nested-item > .list-item, .list-tree li.list-nested-item > .list-item {
+	color: #6a7e82;
+}
+
+// -----------------------------------------------------------------------------
+//! File Name - Selected
+// -----------------------------------------------------------------------------
+
+.file.list-item.selected {
+	background: transparent;
+
+	.icon-file-text {
+		color: white;
+	}
+}
+
+.file.list-item.selected:before {
+	background: transparent;
+}
+
+.tree-view {
+  .status-ignored {
+    display: none;
   }
 }

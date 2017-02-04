@@ -48,3 +48,11 @@
     border-bottom-color: @tip-background-color;
   }
 }
+
+.list-group li:not(.list-nested-item).status-modified, .list-tree li:not(.list-nested-item).status-modified, .list-group li.list-nested-item.status-modified > .list-item, .list-tree li.list-nested-item.status-modified > .list-item {
+	color: #aaa;
+}
+
+.list-group li:not(.list-nested-item).selected.status-modified, .list-tree li:not(.list-nested-item).selected.status-modified, .list-group li.list-nested-item.selected.status-modified > .list-item, .list-tree li.list-nested-item.selected.status-modified > .list-item {
+	color: #a8f9fb;
+}
